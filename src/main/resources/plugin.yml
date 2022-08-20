@@ -1,0 +1,9 @@
+name: PrivateMessaging
+version: '${project.version}'
+main: com.jack.messaging.Main
+api-version: 1.16
+authors: [ Jack ]
+description: Creating a private messaging system
+commands:
+  message:
+  reply:
