@@ -30,8 +30,8 @@ public class MessageCommand implements CommandExecutor {
                         builder.append(args[i]).append(" ");
                     }
 
-                    player.sendMessage("You -> " + target.getName() + ": " + builder);
-                    target.sendMessage(player.getName() + " -> You: " + builder);
+                    player.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + "You" + ChatColor.YELLOW + " -> " + ChatColor.RED + target.getName() + ChatColor.YELLOW + "]: " + builder);
+                    target.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + player.getName() + ChatColor.YELLOW + " -> " + ChatColor.RED + "You" + ChatColor.YELLOW + "]: " + builder);
 
                     main.getRecentMessages().put(player.getUniqueId(), target.getUniqueId());
                 } else {
