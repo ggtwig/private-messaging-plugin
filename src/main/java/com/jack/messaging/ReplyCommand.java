@@ -34,16 +34,16 @@ public class ReplyCommand implements CommandExecutor {
                             builder.append(args[i]).append(" ");
                         }
 
-                        player.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + "You" + ChatColor.YELLOW + " -> " + ChatColor.RED + target.getName() + ChatColor.YELLOW + "]: " + builder);
-                        target.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + player.getName() + ChatColor.YELLOW + " -> " + ChatColor.RED + "You" + ChatColor.YELLOW + "]: " + builder);
+                        player.sendMessage("§e[§cYou§e -> §c" + target.getName() + "§e]: " + builder);
+                        target.sendMessage("§e[§c" + player.getName() + "§e -> §cYou§e]: " + builder);
                     } else {
-                        player.sendMessage(ChatColor.RED + "The player you messaged is not online!");
+                        player.sendMessage("§cThe player you messaged is not online!");
                     }
                 } else {
-                    player.sendMessage(ChatColor.RED + "You haven't messaged anyone yet!");
+                    player.sendMessage("§cYou haven't messaged anyone yet!");
                 }
             } else {
-                player.sendMessage(ChatColor.RED + "Invalid usage! Use /reply <message>.");
+                player.sendMessage("§cInvalid usage! Use /reply <message>.");
             }
 
         }

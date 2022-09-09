@@ -30,15 +30,15 @@ public class MessageCommand implements CommandExecutor {
                         builder.append(args[i]).append(" ");
                     }
 
-                    player.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + "You" + ChatColor.YELLOW + " -> " + ChatColor.RED + target.getName() + ChatColor.YELLOW + "]: " + builder);
-                    target.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + player.getName() + ChatColor.YELLOW + " -> " + ChatColor.RED + "You" + ChatColor.YELLOW + "]: " + builder);
+                    player.sendMessage("§e[§cYou§e -> §c" + target.getName() + "§e]: " + builder);
+                    target.sendMessage("§e[§c" + player.getName() + "§e -> §cYou§e]: " + builder);
 
                     main.getRecentMessages().put(player.getUniqueId(), target.getUniqueId());
                 } else {
-                    player.sendMessage(ChatColor.RED + "This player was not found!");
+                    player.sendMessage("§cThis player was not found!");
                 }
             } else {
-                player.sendMessage(ChatColor.RED + "Invalid usage! Use /message <player> <message>.");
+                player.sendMessage("§cInvalid usage! Use /message <player> <message>.");
             }
         }
 
